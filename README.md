@@ -1,7 +1,7 @@
 # 个人求职网站
 
 一个用 **Markdown 编写内容**、由 **VitePress 生成静态页面**、用 **Git 管理版本**的个人网站。
-用于求职时展示个人介绍、工作经历、项目作品和联系方式。
+用于找实习 / 求职时展示个人介绍、学习进度、项目作品和联系方式。
 
 - 全站内容都是 `docs/` 下的 Markdown 文件，不需要写前端代码就能更新
 - 自带暗色模式、站内搜索、移动端适配
@@ -20,14 +20,14 @@ pnpm preview     # 预览构建结果
 ```
 
 > 如果 `pnpm install` 报 `Ignored build scripts: esbuild`，确认仓库里的
-> `pnpm-workspace.yaml` 中存在 `onlyBuiltDependencies: [esbuild]`（已配置好，改依赖时别删）。
+> `pnpm-workspace.yaml` 中写了 `allowBuilds: { esbuild: false }`（已配置好，改依赖时别删）。
 
 ## 我要改什么？
 
 | 想改的内容 | 打开这个文件 |
 | --- | --- |
-| 首页的姓名、标题、精选项目 | `docs/index.md` |
-| 自我介绍、技能、工作经历 | `docs/about.md` |
+| 首页的姓名、标题、项目卡片 | `docs/index.md` |
+| 自我介绍、技能与学习进度、学习路线 | `docs/about.md` |
 | 简历（可打印 PDF） | `docs/resume.md` |
 | 邮箱、手机、微信、社交链接 | `docs/contact.md` |
 | 项目列表 | `docs/projects/index.md` |
@@ -42,13 +42,13 @@ pnpm preview     # 预览构建结果
 ```
 personal-site/
 ├─ docs/                            # 所有内容都在这里
-│  ├─ index.md                      # 首页（hero + 精选项目 + 概览表）
+│  ├─ index.md                      # 首页（hero + 项目计划 + 概览表）
 │  ├─ about.md                      # 关于我
-│  ├─ resume.md                     # 简历
+│  ├─ resume.md                     # 简历（学生版）
 │  ├─ contact.md                    # 联系我
 │  ├─ projects/
 │  │  ├─ index.md                   # 项目总览
-│  │  └─ sample-project.md          # 项目详情模板（复制它新增项目）
+│  │  └─ template.md                # 项目详情模板（复制它新增项目）
 │  ├─ guide/writing.md              # 内容编写指南
 │  ├─ public/                       # 静态资源：头像、favicon、简历 PDF
 │  └─ .vitepress/
@@ -68,7 +68,7 @@ personal-site/
 
 ```bash
 git add -A
-git commit -m "content: 更新某某项目的结果数据"
+git commit -m "content: 更新项目进度"
 git push
 ```
 
@@ -105,9 +105,10 @@ Vercel、Netlify、Cloudflare Pages 或任意静态服务器；构建命令 `pnp
 
 ## 上线前检查清单
 
-- [ ] 全局搜索替换剩下的示例数据（`yourname`、`某某科技`、`某某大学`、`6 年`；姓名、邮箱、手机号已填成你的）
+- [ ] 全局搜索替换剩下的占位内容（`yourname`、`【待填写】`、`待补充`；姓名、学校、专业、年级、邮箱、手机已填好）
 - [ ] 把真实头像放到 `docs/public/avatar.jpg`，并把 `config.mts` 的 `logo` 与首页 `hero.image.src` 改成 `/avatar.jpg`
-- [ ] `docs/.vitepress/config.mts` 里的 `title`、`description`、`socialLinks` 改成自己的
+- [ ] `docs/.vitepress/config.mts` 里的 `description`、`socialLinks` 改成自己的
+- [ ] 检查「技能与学习进度」表：不会的删掉，只写真实水平
 - [ ] 打印一份简历 PDF，检查分页是否正常
 - [ ] 手机打开一遍，确认导航和卡片排版没问题
-- [ ] 确认没有把不想公开的信息（身份证号、现公司内部数据）写进仓库
+- [ ] 确认没有把不想公开的信息（身份证号、家庭住址）写进仓库

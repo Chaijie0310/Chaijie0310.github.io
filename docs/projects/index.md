@@ -1,60 +1,55 @@
 # 项目作品
 
-这里是我参与过、或者自己做的项目。每个项目我都尽量写清楚四件事：**背景是什么、我做了什么、
-结果如何（尽量量化）、以及如果重做会怎么改** —— 我认为这比罗列技术名词更能说明问题。
+这里会放我做完的项目。现在我刚上大一，还没有完整作品 —— 与其写假的项目，
+不如把**计划和进度**如实放在这里，做完一个就补一篇详情页。
 
 <div class="card-grid">
 
 <ProjectCard
-  title="订单中心服务重构"
-  status="已上线"
-  summary="把单体订单模块拆成 4 个服务，P99 从 850ms 降到 220ms，大促零故障。"
-  tags="Java, Spring Cloud, MySQL, Redis, Kafka"
-  link="/projects/sample-project"
-  repo="https://github.com/yourname/order-service"
+  title="个人网站（进行中）"
+  status="进行中"
+  summary="就是你现在看的这个站点：Markdown 写内容、VitePress 生成、Git 管理，部署到 GitHub Pages。"
+  tags="Markdown, VitePress, Git"
+  link="/projects/template"
 />
 
 <ProjectCard
-  title="内部数据看板"
-  status="已上线"
-  summary="运营自助分析看板，覆盖 12 个业务线，报表产出从 2 天到 10 分钟。"
-  tags="Vue 3, TypeScript, ECharts, Node.js"
-  link="/projects/sample-project"
+  title="课程设计（待补充）"
+  status="规划中"
+  summary="大一课程的大作业，做完后按详情页模板整理：做了什么、卡在哪里、怎么解决的。"
+  tags="待补充"
+  link="/projects/template"
 />
 
 <ProjectCard
-  title="Vue 业务组件库"
-  status="维护中"
-  summary="26 个业务组件 + 完整文档站，GitHub 480 star，3 个团队接入。"
-  tags="Vue, Vite, Rollup, Vitest"
-  link="/projects/sample-project"
-  repo="https://github.com/yourname/ui-kit"
-/>
-
-<ProjectCard
-  title="个人博客生成器"
-  status="已完成"
-  summary="Markdown 写内容、自己写的静态生成脚本，构建耗时 3 秒，部署零成本。"
-  tags="Node.js, Markdown, GitHub Actions"
-  link="/projects/sample-project"
-  repo="https://github.com/yourname/blog-kit"
+  title="前端练习项目（待补充）"
+  status="规划中"
+  summary="第一个从零写完的完整页面或小应用，记录学习过程中真实踩过的坑。"
+  tags="HTML, CSS, JavaScript"
+  link="/projects/template"
 />
 
 </div>
 
-## 怎么读这些项目
+## 我会怎么写项目
 
-每个项目详情页都按同一个结构写，方便你快速定位感兴趣的部分：
+每个项目按同一个结构写，方便你快速判断我的实际水平：
 
 | 部分 | 你会看到什么 |
 | --- | --- |
-| 背景与目标 | 当时的业务处境、要解决的问题、成功标准 |
-| 我的角色 | 我具体负责哪部分，团队规模和协作方式 |
-| 技术方案 | 关键取舍，以及为什么这么选（含被否掉的方案） |
-| 结果 | 尽量量化的产出：性能、成本、效率、稳定性 |
-| 复盘 | 哪些做对了、哪些现在看会改 |
+| 项目背景 | 为什么做这个，解决什么问题，是课程作业还是自己想做 |
+| 我做了什么 | 具体负责哪些页面 / 功能，用了什么技术 |
+| 遇到的坑 | 卡住的地方、怎么查资料、最后怎么解决 |
+| 结果 | 能跑起来的功能、完成度、有没有上线 |
+| 复盘 | 现在回看哪里做得不好，下一步想怎么改 |
+
+## 大一阶段的诚实说明
+
+- 我现在**没有实习经历**，也没有上线的商业项目。
+- 技能以基础为主：HTML / CSS 能写静态页面，JavaScript 在学，Vue 3 计划中。
+- 我能保证的是：学习节奏稳定、愿意做基础工作、有问题会先自己想办法查清楚。
 
 ## 想加一个新项目？
 
-复制 `docs/projects/sample-project.md` 改个名字即可，具体步骤见
-[内容编写指南](/guide/writing#新增一个项目)。卡片和详情页都用 Markdown 写，不需要动代码。
+复制 `docs/projects/template.md`，改个文件名，按模板里的提示填写即可。
+具体步骤见 [内容编写指南](/guide/writing#新增一个项目)。

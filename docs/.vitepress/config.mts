@@ -9,7 +9,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: '柴杰',
   titleTemplate: ':title · 柴杰的个人网站',
-  description: '柴杰的个人网站：教育背景、工作经历、项目作品与联系方式，欢迎联系。',
+  description: '柴杰的个人网站：四川传媒学院计算机科学与技术专业在读，前端 / Web 开发方向，寻找前端开发实习机会。',
 
   base,
   cleanUrls: true,
@@ -27,6 +27,16 @@ export default defineConfig({
   markdown: {
     // 允许在 Markdown 里直接写 HTML（时间线、卡片等排版都能用）
     html: true,
+  },
+
+  vite: {
+    server: {
+      watch: {
+        // 编辑器和工具保存文件时会先写临时文件再改名，监听它们可能抛 EBUSY
+        // 直接让开发服务器退出，这里统一忽略
+        ignored: ['**/.*.tmpdir/**', '**/*.tmp', '**/*.swp', '**/*~'],
+      },
+    },
   },
 
   themeConfig: {
@@ -52,7 +62,7 @@ export default defineConfig({
           text: '项目',
           items: [
             { text: '项目总览', link: '/projects/' },
-            { text: '示例项目（模板）', link: '/projects/sample-project' },
+            { text: '项目详情模板', link: '/projects/template' },
           ],
         },
       ],

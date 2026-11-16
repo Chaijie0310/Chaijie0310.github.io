@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: 柴杰
-  text: 全栈开发工程师
-  tagline: 6 年 Web 开发经验，擅长把复杂业务拆成可维护的系统 —— 目前开放新的工作机会
+  text: 前端方向 · 大一在读
+  tagline: 四川传媒学院 · 计算机科学与技术 —— 正在寻找第一份前端开发实习
   image:
     src: /avatar.svg
     alt: 柴杰
@@ -22,71 +22,77 @@ hero:
 features:
   - icon: 🎯
     title: 关于我
-    details: 教育背景、职业经历、我擅长解决的问题，一页看完。
+    details: 学校、专业、学习路线，以及我在找什么样的实习。
     link: /about
     linkText: 了解更多
   - icon: 🧩
     title: 项目作品
-    details: 4 个代表性项目，包含背景、方案、量化结果与技术选型。
+    details: 项目正在整理中，先看看我打算怎么写、写到什么进度。
     link: /projects/
     linkText: 浏览项目
   - icon: 📄
     title: 在线简历
-    details: 结构化简历，支持浏览器直接打印为 PDF 投递。
+    details: 学生版简历，支持浏览器直接打印为 PDF 投递。
     link: /resume
     linkText: 打开简历
   - icon: 📧
     title: 联系方式
-    details: 邮箱、微信、GitHub，通常 24 小时内回复。
+    details: 邮箱、手机 / 微信，通常 24 小时内回复。
     link: /contact
     linkText: 联系我
 ---
 
-## 精选项目
+## 我在准备的项目
+
+::: tip 项目还在整理中
+我刚上大一，还没有拿得出手的项目。比起编一个，我更愿意把计划和进度如实写在这里 ——
+做完一个就补一篇详情页。
+:::
 
 <div class="card-grid">
 
 <ProjectCard
-  title="订单中心服务重构"
-  status="已上线"
-  summary="把单体订单模块拆成独立服务，QPS 从 300 提到 2000，大促零故障。"
-  tags="Java, Spring Cloud, MySQL, Redis"
-  link="/projects/sample-project"
-  repo="https://github.com/yourname/order-service"
+  title="个人网站（进行中）"
+  status="进行中"
+  summary="就是你现在看的这个站点：内容用 Markdown 写，VitePress 生成页面，Git 管理版本。"
+  tags="VitePress, Markdown, Git, GitHub Pages"
+  link="/projects/template"
 />
 
 <ProjectCard
-  title="内部数据看板"
-  status="已上线"
-  summary="面向运营的自助分析看板，日均 200+ 活跃用户，报表产出从 2 天缩短到 10 分钟。"
-  tags="Vue 3, TypeScript, ECharts, Node.js"
-  link="/projects/sample-project"
+  title="课程设计（待补充）"
+  status="规划中"
+  summary="大一课程的大作业，做完后按详情页模板整理：做了什么、卡在哪里、怎么解决的。"
+  tags="待补充"
+  link="/projects/template"
 />
 
 <ProjectCard
-  title="开源组件库"
-  status="维护中"
-  summary="26 个业务组件，GitHub 480 star，被 3 个团队接入使用。"
-  tags="Vue, Vite, Rollup, Vitest"
-  repo="https://github.com/yourname/ui-kit"
+  title="前端练习项目（待补充）"
+  status="规划中"
+  summary="第一个从零写完的完整页面或小应用，记录学习过程中真实踩过的坑。"
+  tags="HTML, CSS, JavaScript"
+  link="/projects/template"
 />
 
 </div>
 
-## 现在在做什么
+## 最近在做的事
 
-- 🔍 **正在找工作** —— 期望岗位：全栈 / 后端开发工程师，城市：上海或远程
-- 🛠 **持续维护** 自己的开源组件库，最近在补 E2E 测试
-- 📚 **正在学** 分布式系统设计与可观测性实践
+- 📚 **在校学习** —— 计算机科学与技术大一课程，C 语言、计算机导论等基础课
+- 💻 **自学前端** —— 正在按 HTML / CSS → JavaScript → Vue 3 的顺序推进，同时练 Git 和命令行
+- 🔍 **找第一份实习** —— 前端开发方向，成都或远程，寒暑假可全职
+- ✍️ **整理这个网站** —— 把学习过程和项目逐步补成能拿得出手的作品集
 
 ## 快速了解我
 
 | 维度 | 情况 |
 | --- | --- |
-| 工作年限 | 6 年（2019 至今） |
-| 主力技术栈 | TypeScript / Java / Node.js / Vue / Spring Boot |
-| 擅长的场景 | 业务系统重构、性能优化、从 0 到 1 搭产品 |
-| 期望角色 | 能对结果负责的工程师，愿意带小团队 |
-| 到岗时间 | 一个月内 |
+| 学校 / 专业 | 四川传媒学院 · 计算机科学与技术（本科） |
+| 年级 | 大一（2026.09 入学，2030.06 毕业） |
+| 方向 | 前端 / Web 开发 |
+| 目标岗位 | 前端开发实习生（也接受页面重构、小程序相关） |
+| 可实习时间 | 寒暑假全职；学期内每周 2–3 天，可远程 |
+| 到岗时间 | 谈妥后一周内 |
 
 > 想快速判断是否合适？可以直接看 [简历](/resume) 或 [联系我](/contact) 聊聊。
