@@ -32,3 +32,6 @@ desktop.ini
 *.log
 npm-debug.log*
 pnpm-debug.log*
+
+# 临时公钥导出文件
+公钥-粘贴到GitHub.txt
