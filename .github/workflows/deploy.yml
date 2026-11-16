@@ -1,8 +1,11 @@
 name: Deploy site to GitHub Pages
 
+# 说明：这个工作流需要把仓库 Settings → Pages → Source 设为「GitHub Actions」才会生效。
+# 当前该仓库用的是「从分支发布（main / 根目录）」，所以网站是通过根目录里的构建产物发布的，
+# 这个工作流暂时只保留为手动触发，避免两套发布方式互相覆盖。
+# 以后想切回自动部署：把下面的 workflow_dispatch 保留、加上 push 触发，
+# 并在 Settings → Pages 把 Source 改成 GitHub Actions。
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
