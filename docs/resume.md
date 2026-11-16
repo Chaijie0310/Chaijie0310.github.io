@@ -8,7 +8,7 @@
 :::
 
 **柴杰** · 四川传媒学院 计算机科学与技术 · 大一在读
-成都 · 17390876388 · [3194089001@qq.com](mailto:3194089001@qq.com) · [github.com/yourname](https://github.com/yourname)
+成都 · 17390876388 · [3194089001@qq.com](mailto:3194089001@qq.com) · [github.com/Chaijie0310](https://github.com/Chaijie0310)
 
 ## 求职意向
 

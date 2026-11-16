@@ -9,7 +9,7 @@
 | 邮箱 | [3194089001@qq.com](mailto:3194089001@qq.com) |
 | 手机 | 17390876388 |
 | 微信 | 17390876388（同手机号） |
-| GitHub | [github.com/yourname](https://github.com/yourname) |
+| GitHub | [github.com/Chaijie0310](https://github.com/Chaijie0310) |
 | 城市 | 成都（可接受远程） |
 
 ## 找我最快的三种方式

@@ -69,9 +69,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/yourname' },
-      { icon: 'x', link: 'https://x.com/yourname' },
-      { icon: 'linkedin', link: 'https://www.linkedin.com/in/yourname' },
+      { icon: 'github', link: 'https://github.com/Chaijie0310' },
     ],
 
     search: {
