@@ -1,0 +1,197 @@
+/**
+ * 站点自定义样式
+ * 只覆盖配色和几个排版小部件，其余沿用 VitePress 默认主题：
+ *  - .card-grid  卡片网格（首页精选项目、项目总览）
+ *  - .timeline   工作经历时间线
+ *  - .tags       技能 / 关键词标签
+ *  - @media print 打印简历时自动隐藏导航、侧边栏
+ */
+
+:root {
+  --vp-c-brand-1: #2563eb;
+  --vp-c-brand-2: #3b82f6;
+  --vp-c-brand-3: #60a5fa;
+  --vp-c-brand-soft: rgba(37, 99, 235, 0.14);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #2563eb 20%, #7c3aed);
+}
+
+.dark {
+  --vp-c-brand-1: #7aa2ff;
+  --vp-c-brand-2: #93b4ff;
+  --vp-c-brand-3: #b3caff;
+  --vp-c-brand-soft: rgba(122, 162, 255, 0.16);
+}
+
+/* ---------- 首页 ---------- */
+
+.VPHero .name .clip {
+  font-weight: 800;
+}
+
+.VPHero .text {
+  letter-spacing: -0.02em;
+}
+
+.VPHero .tagline {
+  text-wrap: pretty;
+}
+
+.VPFeature {
+  border-radius: 14px;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px -20px var(--vp-c-brand-1);
+}
+
+/* ---------- 卡片网格 ---------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 24px 0 32px;
+}
+
+/* ---------- 时间线 ---------- */
+
+.timeline {
+  position: relative;
+  margin: 24px 0 24px 6px;
+  padding-left: 24px;
+  border-left: 2px solid var(--vp-c-divider);
+}
+
+.timeline > .item {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.timeline > .item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline > .item::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: -31px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--vp-c-brand-1);
+  box-shadow: 0 0 0 3px var(--vp-c-bg);
+}
+
+.timeline .item-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.timeline .item-time {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--vp-c-text-3);
+}
+
+.timeline .item-org {
+  font-size: 14px;
+  color: var(--vp-c-brand-1);
+}
+
+.timeline ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--vp-c-text-2);
+}
+
+/* ---------- 标签 ---------- */
+/* 用 .vp-doc 提高优先级，盖掉正文 ul 默认的项目符号与缩进 */
+
+.vp-doc .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vp-doc .tags li {
+  margin: 0;
+  padding: 3px 10px;
+  font-size: 13px;
+  line-height: 1.7;
+  list-style: none;
+  border-radius: 8px;
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-default-soft);
+}
+
+.vp-doc .tags li::before {
+  content: none;
+}
+
+/* ---------- 提示块微调 ---------- */
+
+.vp-doc .custom-block {
+  border-radius: 10px;
+}
+
+/* ---------- 打印：把页面变成一份干净的简历 ---------- */
+
+@media print {
+  .VPNav,
+  .VPSidebar,
+  .VPLocalNav,
+  .VPFooter,
+  .VPDocAside,
+  .VPDocFooter,
+  .VPDoc .aside,
+  .VPBackdrop {
+    display: none !important;
+  }
+
+  .VPContent,
+  .VPDoc,
+  .VPDoc .container,
+  .VPDoc .content,
+  .VPDoc .content-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .vp-doc {
+    font-size: 12pt;
+  }
+
+  .vp-doc h1 {
+    font-size: 20pt;
+  }
+
+  .vp-doc h2 {
+    margin-top: 16pt;
+    padding-top: 0;
+    border-top: none;
+    font-size: 14pt;
+  }
+
+  .timeline > .item {
+    padding-bottom: 12pt;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}

@@ -1,0 +1,12 @@
+# pnpm 安装配置
+# nodeLinker: hoisted —— Windows 下用扁平 node_modules，避开符号链接解析问题
+# allowBuilds.esbuild: false —— 明确跳过 esbuild 的安装脚本：它的平台二进制由
+#   @esbuild/win32-x64 之类的包直接提供，VitePress 构建不需要该脚本。
+#   （pnpm 11 起，安装相关的设置都写在 pnpm-workspace.yaml，不再读 package.json 的 pnpm 字段）
+nodeLinker: hoisted
+
+allowBuilds:
+  esbuild: false
+
+# pnpm run 之前不再自动校验 / 安装依赖，避免每次命令都触发一次安装
+verifyDepsBeforeRun: false

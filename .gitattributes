@@ -1,0 +1,11 @@
+# 统一换行符，避免 Windows / macOS / CI 之间反复出现 "LF will be replaced by CRLF"
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
