@@ -173,10 +173,32 @@
 
   .vp-doc {
     font-size: 12pt;
+    color: #000 !important;
+  }
+
+  /* 暗色模式下打印也强制白底黑字，避免整页黑底浪费墨、也不好看 */
+  html,
+  body,
+  .VPApp,
+  .VPContent,
+  .VPDoc,
+  :root,
+  .dark {
+    background: #fff !important;
+    color: #000 !important;
+    --vp-c-bg: #fff;
+    --vp-c-bg-alt: #fff;
+    --vp-c-bg-soft: #f6f6f7;
+    --vp-c-text-1: #000;
+    --vp-c-text-2: #333;
+    --vp-c-text-3: #666;
+    --vp-c-divider: #ddd;
+    --vp-c-brand-1: #1d4ed8;
   }
 
   .vp-doc h1 {
     font-size: 20pt;
+    color: #000 !important;
   }
 
   .vp-doc h2 {

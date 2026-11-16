@@ -8,6 +8,12 @@ docs/.vitepress/cache/
 # 截图 / 预览临时文件
 .preview/
 
+# 本地便捷启动器（内含本机 Node 路径，不随仓库分发）
+启动网站.cmd
+
+# 简历 PDF 的本地副本（网站用的是 docs/public/resume-chaijie.pdf）
+/简历-柴杰.pdf
+
 # 本地环境与编辑器
 .env
 .env.local
