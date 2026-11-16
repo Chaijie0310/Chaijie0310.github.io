@@ -105,7 +105,7 @@ Vercel、Netlify、Cloudflare Pages 或任意静态服务器；构建命令 `pnp
 
 ## 上线前检查清单
 
-- [ ] 全局搜索替换剩下的示例数据（`138-0000-0000`、`yourname`、`某某科技`；姓名和邮箱已填成你的）
+- [ ] 全局搜索替换剩下的示例数据（`yourname`、`某某科技`、`某某大学`、`6 年`；姓名、邮箱、手机号已填成你的）
 - [ ] 把真实头像放到 `docs/public/avatar.jpg`，并把 `config.mts` 的 `logo` 与首页 `hero.image.src` 改成 `/avatar.jpg`
 - [ ] `docs/.vitepress/config.mts` 里的 `title`、`description`、`socialLinks` 改成自己的
 - [ ] 打印一份简历 PDF，检查分页是否正常

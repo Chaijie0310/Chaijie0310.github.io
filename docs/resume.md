@@ -6,7 +6,7 @@
 :::
 
 **柴杰** · 全栈开发工程师 · 6 年经验
-上海 · 138-0000-0000 · [3194089001@qq.com](mailto:3194089001@qq.com) · [github.com/yourname](https://github.com/yourname)
+上海 · 17390876388 · [3194089001@qq.com](mailto:3194089001@qq.com) · [github.com/yourname](https://github.com/yourname)
 
 ## 求职意向
 

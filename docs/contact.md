@@ -7,8 +7,8 @@
 | 方式 | 信息 |
 | --- | --- |
 | 邮箱 | [3194089001@qq.com](mailto:3194089001@qq.com) |
-| 手机 | 138-0000-0000（待填写） |
-| 微信 | 待填写（建议填微信号，方便 HR 加你） |
+| 手机 | 17390876388 |
+| 微信 | 17390876388（同手机号） |
 | GitHub | [github.com/yourname](https://github.com/yourname) |
 | 领英 | [linkedin.com/in/yourname](https://www.linkedin.com/in/yourname) |
 | 城市 | 上海（可接受远程） |
