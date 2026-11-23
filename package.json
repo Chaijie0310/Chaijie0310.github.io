@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "preview": "vitepress preview docs"
+    "preview": "vitepress preview docs",
+    "publish:root": "node scripts/publish-root.mjs",
+    "deploy": "vitepress build docs && node scripts/publish-root.mjs"
   },
   "devDependencies": {
     "vitepress": "^1.6.3",

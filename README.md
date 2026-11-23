@@ -74,28 +74,62 @@ git push
 
 提交信息前缀约定：`content:` 内容、`style:` 样式、`feat:` 新功能、`fix:` 修复、`chore:` 杂项。
 
-## 部署到 GitHub Pages
+## 用 Git 管理并部署（当前采用的方式）
 
-仓库里已经带了 `.github/workflows/deploy.yml`，流程是：
+这个网站的**内容、样式、配置全部在 Git 仓库里**，线上站点由 Git 仓库直接发布，
+没有手工上传、没有服务器，改动都有提交记录可查。
 
-1. 在 GitHub 新建仓库（例如 `personal-site` 或 `yourname.github.io`），把本地仓库推上去：
+### 仓库结构
+
+| 位置 | 作用 | 是否手改 |
+| --- | --- | --- |
+| `docs/*.md` | **唯一内容来源**，五个页面都是 Markdown | ✅ 改这里 |
+| `docs/.vitepress/` | 导航、配色、组件等配置 | ✅ 需要调样式时改 |
+| 根目录 `*.html`、`assets/` | 构建产物，GitHub Pages 发布的对象 | ❌ 不要手改 |
+| `.nojekyll` | 告诉 GitHub 不要用 Jekyll 处理，按静态文件原样发布 | ❌ |
+
+### 更新流程（三步）
+
+```bash
+# 1. 改 Markdown 后重新构建，并把产物同步到仓库根目录
+pnpm deploy
+
+# 2. 提交（内容与产物一起进版本库）
+git add -A
+git commit -m "content: 更新项目进度"
+
+# 3. 推送，GitHub Pages 自动重新发布（约 1 分钟）
+git push
+```
+
+`pnpm deploy` = `pnpm build` + `node scripts/publish-root.mjs`，脚本会把
+`docs/.vitepress/dist` 的内容复制到仓库根目录并写入 `.nojekyll`。
+
+### 第一次把仓库推上 GitHub
+
+1. 新建仓库，名字用 `你的用户名.github.io`（这样网址是 `https://你的用户名.github.io`）；
+2. 配置 SSH 密钥（`ssh-keygen` 生成，公钥加到 GitHub → Settings → SSH and GPG keys）；
+3. 推送：
 
    ```bash
-   git remote add origin git@github.com:yourname/personal-site.git
+   git remote add origin git@github.com:你的用户名/你的用户名.github.io.git
    git branch -M main
    git push -u origin main
    ```
 
-2. 仓库 **Settings → Pages → Build and deployment**，Source 选 **GitHub Actions**；
-3. 之后每次 push 到 `main`，工作流会自动构建并发布。
+4. 仓库 **Settings → Pages**，Source 保持 **Deploy from a branch**，分支 `main`、目录 `/ (root)`。
 
-工作流会根据仓库名自动设置 `base`：
+### 另一种方式：GitHub Actions 自动构建
 
-- 仓库名是 `yourname.github.io` → 站点根路径为 `/`，地址 `https://yourname.github.io`
-- 其他仓库名 → 自动使用 `/<仓库名>/` 前缀，地址 `https://yourname.github.io/<仓库名>/`
+仓库里也带了 `.github/workflows/deploy.yml`（用 pnpm 构建后发布 artifact）。
+要改用它，需要把 **Settings → Pages → Source** 切成 **GitHub Actions**，
+并把工作流的触发条件从手动改回 `on: push`。两种方式**只能选一种**，否则会互相覆盖。
 
-本地手动构建对应项目仓库时，用 `BASE=/personal-site/ pnpm build`（PowerShell 下：
-`$env:BASE="/personal-site/"; pnpm build`）。
+### 本项目已经上线的记录
+
+- 仓库：<https://github.com/Chaijie0310/Chaijie0310.github.io>
+- 站点：<https://chaijie0310.github.io>
+- 首次提交：`dd80e48`（初始化），后续按 `content:` / `style:` / `build:` 前缀分次提交
 
 ## 其他部署方式
 
